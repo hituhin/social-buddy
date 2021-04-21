@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "../src/components/Home/Home";
 import NotFound from "../src/components/NotFound/NotFound";
 import About from "../src/components/About/About";
+import PostDetail from "../src/components/PostDetail/PostDetail";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users"></Route>
+          <Route path="/post/:id">
+            <PostDetail />
+          </Route>
           <Route path="*">
             <NotFound />
           </Route>
